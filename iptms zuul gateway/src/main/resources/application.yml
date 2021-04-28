@@ -1,0 +1,27 @@
+# Service will be mapped under the /api URI
+zuul:
+ ignoredServices: '*'
+ routes:
+  test:
+   path: /redirect/**
+   url: http://google.com
+  insurance-claim-microservice:
+   path: /insurance-claim-microservice/**
+   serviceId: insurance-claim-microservice
+  ip-treatment-offerings:
+   path: /ip-treatment-offerings/**
+   serviceId: ip-treatment-offerings
+  ip-treatment-microservice:
+   path: /ip-treatment-microservice/**
+   serviceId: ip-treatment-microservice
+  AuditAuthentication:
+   path: /Authentication/**
+   serviceId: Authentication
+
+
+#LocalCountry1:
+# path: /client1/**
+# serviceId: LocalCountry1
+#LocalCountry2:
+# path: /client2/**
+#serviceId: LocalCountry2
